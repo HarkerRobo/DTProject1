@@ -17,7 +17,7 @@ public class DriveTrain extends Subsystem {
     // here. Call these from Commands.
 private Talon talon1, talon2, talon3, talon4;
 
-public DriveTrain() {
+public DriveTrain(){
 talon1 = new Talon(1);
 talon2 = new Talon(2);
 talon3 = new Talon(3);
@@ -38,6 +38,19 @@ public void customSpeed(double speed1, double speed2, double speed3, double spee
    talon4.set(speed4);
 }
 
+public void stop(){
+    talon1.set(0);
+    talon2.set(0);
+    talon3.set(0);
+    talon4.set(0);
+}
+
+public void moveForward(){
+    talon1.set(1);
+    talon2.set(2);
+    talon3.set(3);
+    talon4.set(4);
+}
     public void initDefaultCommand() {
         // Set the default command for a subsystem here.
         //setDefaultCommand(new MySpecialCommand());
