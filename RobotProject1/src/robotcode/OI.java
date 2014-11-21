@@ -18,6 +18,7 @@ public class OI {
     public ManualMoveCommand manualCommand = new ManualMoveCommand();
     
     public OI() {
+        manualCommand.start();
         gamepad.getButtonA().whenPressed(new ForwardCommand());
         gamepad.getButtonB().whenPressed(new ReverseCommand());
     }
