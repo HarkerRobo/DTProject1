@@ -31,11 +31,11 @@ public void moveBackward(){
   talon4.set(-1);
 }
 
-public void customSpeed(double speed1, double speed2, double speed3, double speed4){
-   talon1.set(speed1);
-   talon2.set(speed2);
-   talon3.set(speed3);
-   talon4.set(speed4);
+public void customSpeed(double left, double right){
+   talon1.set(left);
+   talon2.set(left);
+   talon3.set(right);
+   talon4.set(right);
 }
 
 public void stop(){
